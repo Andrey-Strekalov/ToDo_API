@@ -1,0 +1,81 @@
+# Игнорировать файлы сборки и бинарники
+**/[Bb]in/
+**/[Oo]bj/
+**/.vs/
+**/packages/
+
+# Игнорировать файлы пользовательских настроек IDE
+*.user
+*.userprefs
+*.suo
+*.vssscc
+*.cachefile
+
+# Игнорировать файлы базы данных SQLite (ваш случай!)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Игнорировать резервные копии и временные файлы
+*.backup
+*.bak
+*.tmp
+*.temp
+*~
+
+# Игнорировать результаты публикации
+**/publish/
+**/bin/Release/
+**/bin/Debug/
+
+# Игнорировать файлы логов
+*.log
+**/logs/
+
+# Игнорировать файлы пакетов NuGet
+**/.nuget/
+*.nupkg
+nuget.exe
+
+# Игнорировать резервные файлы Rider (если используете)
+.idea/
+*.sln.iml
+
+# Игнорировать файлы моей книги
+_UpgradeReport_Files/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# Игнорировать файлы анализа производительности
+*.psess
+*.vsp
+*.pidb
+
+# Игнорировать файлы покрытия тестами
+*.coverage
+*.coveragexml
+
+# Игнорировать файлы DotCover
+*.dotCover
+
+# Игнорировать файлы NCrunch
+**/.ncrunch*
+*.*crunch*.local.xml
+
+# Игнорировать файлы Azure Functions
+**/local.settings.json
+
+# Игнорировать файлы MSTest
+**/TestResults/
+*.trx
+
+# Игнорировать файлы машинного кода
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+
+# Игнорировать файлы макросов Office
+*.lnk
