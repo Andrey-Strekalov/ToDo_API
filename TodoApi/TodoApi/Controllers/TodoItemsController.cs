@@ -71,6 +71,21 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
+        // PATCH: api/TodoItems/5/toggle-status
+        [HttpPatch("{id}/toggle-status")]
+        public async Task<IActionResult> ChangeTodoStatus(long id)
+        {
+            try
+            {
+                var updatedTodo = await _todoService.ToggleTodoStatusAsync(id);
+                return Ok(updatedTodo);
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
         // POST: api/TodoItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

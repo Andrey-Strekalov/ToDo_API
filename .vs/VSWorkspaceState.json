@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TodoApi",
+    "\\TodoApi\\TodoApi",
+    "\\TodoApi\\TodoApi\\Controllers"
+  ],
+  "SelectedNode": "\\TodoApi\\TodoApi\\Controllers\\TodoItemsController.cs",
+  "PreviewInSolutionExplorer": false
+}

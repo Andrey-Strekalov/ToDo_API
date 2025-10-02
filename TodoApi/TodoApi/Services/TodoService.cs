@@ -67,10 +67,25 @@ public class TodoService : ITodoService
 
     public async Task<bool> TodoItemExitsAsync(long id)
     {
-        return await _context.TodoItems.AnyAsync(e => e.Id == id); 
+        return await _context.TodoItems.AnyAsync(e => e.Id == id);
     }
 
+    public async Task<TodoItem> ToggleTodoStatusAsync(long id)
+    {
+        var todoItem = await _context.TodoItems.FindAsync(id);
 
+        if (todoItem == null)
+        {
+            throw new ArgumentException($"Todo item with id {id} not found");
+        }
+
+        // Меняем статус на противоположный
+        todoItem.isComplete = !todoItem.isComplete;
+
+        await _context.SaveChangesAsync();
+
+        return todoItem;
+    }
 
 }
 

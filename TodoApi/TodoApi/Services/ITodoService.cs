@@ -15,6 +15,7 @@ public interface ITodoService
     Task<IEnumerable<TodoItem>> GetCompletedTodosAsync();
     Task<IEnumerable<TodoItem>> GetIncompleteTodosAsync();
     Task DeleteCompletedTodosAsync();
+    Task<TodoItem> ToggleTodoStatusAsync(long id);
 
     Task<bool> TodoItemExitsAsync(long id);
 }
